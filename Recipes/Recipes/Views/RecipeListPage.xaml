@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recipes.Views.RecipeListPage"
+             Title="RecipeListPage">
+    <VerticalStackLayout>
+
+        <VerticalStackLayout VerticalOptions="FillAndExpand">
+
+
+            <!--<ListView VerticalOptions="FillAndExpand" ItemsSource="{Binding AllRecipeList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout Grid.Column="0" BackgroundColor="White" Margin="0,5,0,5">
+
+                                <Image HeightRequest="60" WidthRequest="100" Source="{Binding strMealThumb}"/>
+
+                                <Label Text="{Binding strMeal}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium" LineBreakMode="CharacterWrap"/>
+
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+
+            <CollectionView VerticalOptions="FillAndExpand" ItemsSource="{Binding AllRecipeList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <HorizontalStackLayout Grid.Column="0" BackgroundColor="White" Margin="0,5,0,5">
+
+                            <Image HeightRequest="60" WidthRequest="100" Source="{Binding strMealThumb}"/>
+
+                            <Label Text="{Binding strMeal}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium" LineBreakMode="CharacterWrap"/>
+
+                        </HorizontalStackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
